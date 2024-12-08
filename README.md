@@ -8,8 +8,6 @@
 macOS에서는 파일을 [NFD](https://en.wikipedia.org/wiki/Unicode_equivalence#Normal_forms)(Normalization Form D) 방식으로 저장하며,
 Windows는 [NFC](https://en.wikipedia.org/wiki/Unicode_equivalence#Normal_forms)(Normalization Form C) 방식으로 저장하기 때문에 발생하는 문제입니다.
 
-https://github.com/3seoksw/NFD2C-macOS/raw/main/assets/nfd2c-demo.mov
-
 ## 기능
 
 - **파일 이름 변환**: 지정한 디렉토리 내의 모든 파일 이름을 NFD에서 NFC 형식으로 변환.
