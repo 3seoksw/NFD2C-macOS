@@ -8,11 +8,7 @@
 macOS에서는 파일을 [NFD](https://en.wikipedia.org/wiki/Unicode_equivalence#Normal_forms)(Normalization Form D) 방식으로 저장하며,
 Windows는 [NFC](https://en.wikipedia.org/wiki/Unicode_equivalence#Normal_forms)(Normalization Form C) 방식으로 저장하기 때문에 발생하는 문제입니다.
 
-`자소분리`란,
-Windows와 같은 다른 운영체제로 한글 파일이름을 보낼 때, 파일이름이 깨지는 걸 수정해주는 메뉴바 프로그램입니다.
-이런 현상을 `자소분리`라고 하는데, 운영체제별로 파일 이름을 저장하는 방식이 다르기 때문에 발생합니다.
-
-이러한 문제를 해결하고자, 특정 디렉토리에서는 모든 파일 이름을 강제적으로 NFC 방식으로 전환해주어 한글로 된 파일 이름이 깨지는 것을 방지합니다!
+https://github.com/3seoksw/NFD2C-macOS/raw/main/assets/nfd2c-demo.mov
 
 ## 기능
 
