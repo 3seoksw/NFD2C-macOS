@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let hostingController = NSHostingController(rootView: ContentView())
         popover.contentViewController = hostingController
         
-        // popover.behavior = .transient
+        popover.behavior = .transient
     }
 
     @objc func togglePopover(_ sender: Any?) {

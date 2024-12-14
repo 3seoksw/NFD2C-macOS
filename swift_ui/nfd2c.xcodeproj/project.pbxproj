@@ -37,7 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8012A6E72CFF33F100748D11 /* nfd2c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nfd2c.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8012A6E72CFF33F100748D11 /* NFD2C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFD2C.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8012A6F82CFF33F300748D11 /* nfd2cTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nfd2cTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8012A7022CFF33F300748D11 /* nfd2cUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nfd2cUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8012A7592CFF3BA300748D11 /* libnfd2c.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnfd2c.dylib; path = ../Rust/target/release/libnfd2c.dylib; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		8012A6E82CFF33F100748D11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8012A6E72CFF33F100748D11 /* nfd2c.app */,
+				8012A6E72CFF33F100748D11 /* NFD2C.app */,
 				8012A6F82CFF33F300748D11 /* nfd2cTests.xctest */,
 				8012A7022CFF33F300748D11 /* nfd2cUITests.xctest */,
 			);
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8012A6E62CFF33F100748D11 /* nfd2c */ = {
+		8012A6E62CFF33F100748D11 /* NFD2C */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8012A70C2CFF33F300748D11 /* Build configuration list for PBXNativeTarget "nfd2c" */;
+			buildConfigurationList = 8012A70C2CFF33F300748D11 /* Build configuration list for PBXNativeTarget "NFD2C" */;
 			buildPhases = (
 				8012A6E32CFF33F100748D11 /* Sources */,
 				8012A6E42CFF33F100748D11 /* Frameworks */,
@@ -134,11 +134,11 @@
 			fileSystemSynchronizedGroups = (
 				8012A6E92CFF33F100748D11 /* nfd2c */,
 			);
-			name = nfd2c;
+			name = NFD2C;
 			packageProductDependencies = (
 			);
 			productName = nfd2c;
-			productReference = 8012A6E72CFF33F100748D11 /* nfd2c.app */;
+			productReference = 8012A6E72CFF33F100748D11 /* NFD2C.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8012A6F72CFF33F300748D11 /* nfd2cTests */ = {
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8012A6E22CFF33F100748D11 /* Build configuration list for PBXProject "nfd2c" */;
+			buildConfigurationList = 8012A6E22CFF33F100748D11 /* Build configuration list for PBXProject "NFD2C" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -224,7 +224,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8012A6E62CFF33F100748D11 /* nfd2c */,
+				8012A6E62CFF33F100748D11 /* NFD2C */,
 				8012A6F72CFF33F300748D11 /* nfd2cTests */,
 				8012A7012CFF33F300748D11 /* nfd2cUITests */,
 			);
@@ -282,12 +282,12 @@
 /* Begin PBXTargetDependency section */
 		8012A6FA2CFF33F300748D11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8012A6E62CFF33F100748D11 /* nfd2c */;
+			target = 8012A6E62CFF33F100748D11 /* NFD2C */;
 			targetProxy = 8012A6F92CFF33F300748D11 /* PBXContainerItemProxy */;
 		};
 		8012A7042CFF33F300748D11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8012A6E62CFF33F100748D11 /* nfd2c */;
+			target = 8012A6E62CFF33F100748D11 /* NFD2C */;
 			targetProxy = 8012A7032CFF33F300748D11 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -414,6 +414,10 @@
 		8012A70D2CFF33F300748D11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = nfd2c/nfd2c.entitlements;
@@ -424,6 +428,7 @@
 				DEVELOPMENT_TEAM = FZ8DDWDS7Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = x86_64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = nfd2c/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -436,9 +441,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nfd2c/Library",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = none.nfd2c;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = "0.1.0-alpha";
+				PRODUCT_BUNDLE_IDENTIFIER = "WooSeok-Kim.NFD2C";
+				PRODUCT_NAME = NFD2C;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/nfd2c/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
@@ -448,6 +453,10 @@
 		8012A70E2CFF33F300748D11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = nfd2c/nfd2c.entitlements;
@@ -458,6 +467,7 @@
 				DEVELOPMENT_TEAM = FZ8DDWDS7Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = x86_64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = nfd2c/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -470,9 +480,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nfd2c/Library",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = none.nfd2c;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = "0.1.0-alpha";
+				PRODUCT_BUNDLE_IDENTIFIER = "WooSeok-Kim.NFD2C";
+				PRODUCT_NAME = NFD2C;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/nfd2c/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
@@ -550,7 +560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8012A6E22CFF33F100748D11 /* Build configuration list for PBXProject "nfd2c" */ = {
+		8012A6E22CFF33F100748D11 /* Build configuration list for PBXProject "NFD2C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8012A70A2CFF33F300748D11 /* Debug */,
@@ -559,7 +569,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8012A70C2CFF33F300748D11 /* Build configuration list for PBXNativeTarget "nfd2c" */ = {
+		8012A70C2CFF33F300748D11 /* Build configuration list for PBXNativeTarget "NFD2C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8012A70D2CFF33F300748D11 /* Debug */,

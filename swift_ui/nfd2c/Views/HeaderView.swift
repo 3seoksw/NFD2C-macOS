@@ -16,8 +16,8 @@ struct HeaderView: View {
                 Spacer()
                 
                 HStack {
-                    Image(systemName: "globe")
-                        .foregroundStyle(.tint)
+                    // Image(systemName: "globe")
+                        // .foregroundStyle(.tint)
                     
                     Text("NFD2C")
                         .font(.headline)
