@@ -4,7 +4,7 @@
 > 현재 이 앱은 정식 릴리즈 버전이 아닌 **Alpha** 버전입니다.
 > 개발이 진행 중이기 때문에, 안정성과 기능이 완전하지 않다는 점 양해 부탁드립니다.
 
-`NFD2C`는 macOS 전용 Swift 앱으로, macOS 파일의 `자소분리` (`가나다`로 저장되어야 할 이름이 `ㄱㅏㄴㅏㄷㅏ`와 같이 저장되는 것) 문제를 해결해주는 프로그램입니다.
+`NFD2C`는 macOS 전용 메뉴바 앱으로, macOS 파일의 `자소분리` (`가나다`로 저장되어야 할 이름이 `ㄱㅏㄴㅏㄷㅏ`와 같이 저장되는 것) 문제를 해결해주는 프로그램입니다.
 macOS에서는 파일을 [NFD](https://en.wikipedia.org/wiki/Unicode_equivalence#Normal_forms)(Normalization Form D) 방식으로 저장하며,
 Windows는 [NFC](https://en.wikipedia.org/wiki/Unicode_equivalence#Normal_forms)(Normalization Form C) 방식으로 저장하기 때문에 발생하는 문제입니다.
 
@@ -19,16 +19,12 @@ https://github.com/user-attachments/assets/98fcb955-c3b2-403a-8fea-d0708f722488
 ## 사용 방법
 
 > [!NOTE]
-> 정식 배포 단계가 아니기 때문에 프로그램이 아직 패키징되지 않은 상태입니다.
+> 정식 배포 단계가 아니기 때문에 프로그램이 아직 불완전하다는 점 양해 부탁드립니다.
 
-1. 해당 Repository를 clone하여 파일을 다운로드
-
-```bash
-git clone git@github.com:3seoksw/NFD2C-macOS.git
-```
-
-2. Xcode에서 해당 프로젝트를 열고 `NFD2C.xcodeproj`를 빌드
-3. 앱을 실행
+1. [Github Release](https://github.com/3seoksw/NFD2C-macOS/releases/tag/v0.1.0-alpha)에서 `NFD2C.zip` 파일을 다운로드
+2. 다운로드 받은 `NFD2C.zip` 파일을 압축해제
+3. `NFD2C.app` 파일을 실행
+4. `System Settings` - `Privacy & Security` 에서 `NFD2C`에게 권한 승인
 
 ## 사용 방법
 
