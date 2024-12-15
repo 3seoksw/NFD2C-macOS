@@ -38,7 +38,7 @@ class DirectoryViewModel: ObservableObject {
     
     func selectDirectoryURL() -> URL? {
         let openPanel = NSOpenPanel()
-        openPanel.title = "Choose a Directory"
+        openPanel.title = String(localized: "Choose a Directory")
         openPanel.canChooseFiles = true
         openPanel.canChooseDirectories = true
         openPanel.showsResizeIndicator = true

@@ -21,7 +21,7 @@ struct ChangesView: View {
                 // let recentChanges = Array(changes.suffix(numberOfTrackingChanges))
                 
                 VStack(alignment: .leading) {
-                    Text("Recently Changed File(s): \(recentChanges.count)")
+                    Text("Recently Changed File(s)")
                         .fixedSize()
                         .fontWeight(.bold)
                         .foregroundStyle(.gray)
