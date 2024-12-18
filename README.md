@@ -27,9 +27,14 @@ https://github.com/user-attachments/assets/98fcb955-c3b2-403a-8fea-d0708f722488
 4. `System Settings` - `Privacy & Security` 에서 `NFD2C`에게 권한 승인
 
 ## 사용 방법
+
 > [!CAUTION]
 > 최상위(`/USERNAME`) 또는 상위 디렉토리의 선택은 지양해주시기 바랍니다.
 > 상위 디렉토리 선택 시, 너무 많은 파일들을 감시해야 하므로 시스템에 과부하가 발생할 수 있습니다.
+
+> [!CAUTION]
+> 파일 업로드 시 Chrome 브라우저를 사용할 경우, 여전히 자소분리가 일어나는 치명적 결함을 확인하였습니다.
+> 맥에서 파일 업로드 시에는 권장하는 브라우저는 **Safari**, **Firefox**, **Zen**입니다.
 
 1. 메뉴바에서 NFD2C 아이콘을 클릭
 2. 우측 상단의 폴더 아이콘을 클릭하여 디렉토리 선택
