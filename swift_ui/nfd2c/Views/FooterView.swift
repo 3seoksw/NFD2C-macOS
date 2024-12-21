@@ -24,7 +24,7 @@ struct FooterView: View {
                 NSApplication.shared.terminate(nil)
             }) {
                 Image(systemName: "power")
-                    .foregroundStyle(isHovered ? .blue : .white)
+                    .foregroundStyle(isHovered ? .blue : .primary)
             }
             .buttonStyle(BorderlessButtonStyle())
             .onHover { hovering in

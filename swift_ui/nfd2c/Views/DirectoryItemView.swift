@@ -26,11 +26,11 @@ struct DirectoryItemView: View {
                     Text("\(shortenedPath)")
                         .lineLimit(1)
                         .truncationMode(.middle)
-                        .foregroundStyle(isHovered ? .blue : .white)
+                        .foregroundStyle(isHovered ? .blue : .primary)
                 } else {
                     let shortenedPath = shortenUserPath(path)
                     Text("\(shortenedPath)")
-                        .foregroundStyle(isHovered ? .blue : .white)
+                        .foregroundStyle(isHovered ? .blue : .primary)
                 }
             }
             .transition(.move(edge: .top))
