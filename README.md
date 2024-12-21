@@ -39,3 +39,14 @@ https://github.com/user-attachments/assets/98fcb955-c3b2-403a-8fea-d0708f722488
 1. 메뉴바에서 NFD2C 아이콘을 클릭
 2. 우측 상단의 폴더 아이콘을 클릭하여 디렉토리 선택
 3. 선택한 디렉토리 내의 모든 파일들의 변경사항을 감지
+
+---
+
+## To-Do List
+
+- [ ] Light Mode Support
+- [ ] Enhancement on macOS Version Compatibility
+- UI/UX
+  - [ ] Clicking outside the window closes the window
+- Functionality
+  - [ ] Windows $\rightarrow$ macOS File Conversion Support
