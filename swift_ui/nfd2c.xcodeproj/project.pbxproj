@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		803CEB132D0EAC6E0057BF93 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 803CEB122D0EAC6E0057BF93 /* Localizable.xcstrings */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8012A6F92CFF33F300748D11 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -41,6 +45,7 @@
 		8012A6F82CFF33F300748D11 /* nfd2cTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nfd2cTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8012A7022CFF33F300748D11 /* nfd2cUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nfd2cUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8012A7592CFF3BA300748D11 /* libnfd2c.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnfd2c.dylib; path = ../Rust/target/release/libnfd2c.dylib; sourceTree = "<group>"; };
+		803CEB122D0EAC6E0057BF93 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = nfd2c/Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -89,6 +94,7 @@
 		8012A6DE2CFF33F100748D11 = {
 			isa = PBXGroup;
 			children = (
+				803CEB122D0EAC6E0057BF93 /* Localizable.xcstrings */,
 				8012A6E92CFF33F100748D11 /* nfd2c */,
 				8012A6FB2CFF33F300748D11 /* nfd2cTests */,
 				8012A7052CFF33F300748D11 /* nfd2cUITests */,
@@ -216,6 +222,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 8012A6DE2CFF33F100748D11;
 			minimizedProjectReferenceProxies = 1;
@@ -236,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803CEB132D0EAC6E0057BF93 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +360,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -408,6 +417,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -441,7 +451,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nfd2c/Library",
 				);
-				MARKETING_VERSION = "0.1.0-alpha";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = "0.1.1-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = "WooSeok-Kim.NFD2C";
 				PRODUCT_NAME = NFD2C;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -480,7 +491,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nfd2c/Library",
 				);
-				MARKETING_VERSION = "0.1.0-alpha";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = "0.1.1-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = "WooSeok-Kim.NFD2C";
 				PRODUCT_NAME = NFD2C;
 				SWIFT_EMIT_LOC_STRINGS = YES;
