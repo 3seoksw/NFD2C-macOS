@@ -44,9 +44,8 @@ https://github.com/user-attachments/assets/98fcb955-c3b2-403a-8fea-d0708f722488
 
 ## To-Do List
 
-- [ ] Light Mode Support
-- [ ] Enhancement on macOS Version Compatibility
-- UI/UX
-  - [ ] Clicking outside the window closes the window
-- Functionality
-  - [ ] Windows $\rightarrow$ macOS File Conversion Support
+- [x] Korean Support
+- [x] Light Mode Support
+- [x] Enhancement on macOS Version Compatibility
+- [x] Clicking outside the window closes the window (transient popover)
+- [ ] Windows $\rightarrow$ macOS File Conversion Support
