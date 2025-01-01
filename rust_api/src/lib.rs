@@ -4,7 +4,7 @@ use std::ffi::{CStr, CString};
 use std::os::raw::{c_char, c_int};
 use std::path::Path;
 use std::ptr;
-use processor::{process_file, process_directory};
+use processor::{normalize_name, process_directory};
 
 #[no_mangle]
 pub extern "C" fn process_directory_c(dir: *const c_char, recursive: c_int, verbose: c_int) -> *mut *mut c_char {
@@ -56,7 +56,7 @@ pub extern "C" fn process_directory_c(dir: *const c_char, recursive: c_int, verb
 }
 
 #[no_mangle]
-pub extern "C" fn process_file_c(file_path: *const c_char, verbose: c_int) -> *mut c_char {
+pub extern "C" fn normalize_name_c(file_path: *const c_char, verbose: c_int, is_file: c_int) -> *mut c_char {
     let c_str = unsafe { CStr::from_ptr(file_path) };
     let file_str = match c_str.to_str() {
         Ok(s) => s,
@@ -68,8 +68,9 @@ pub extern "C" fn process_file_c(file_path: *const c_char, verbose: c_int) -> *m
     let path = Path::new(file_str);
 
     let verbose = verbose != 0;
+    let is_file = is_file != 0;
 
-    let result = process_file(&path, verbose);
+    let result = normalize_name(&path, verbose, is_file);
 
     if result.is_empty() {
         return ptr::null_mut();
