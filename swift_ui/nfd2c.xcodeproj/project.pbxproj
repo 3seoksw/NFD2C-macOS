@@ -48,9 +48,22 @@
 		803CEB122D0EAC6E0057BF93 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = nfd2c/Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		808EFC912D254F0B00721275 /* Exceptions for "nfd2c" folder in "NFD2C" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Library/libnfd2c_v0.1.0.a,
+			);
+			target = 8012A6E62CFF33F100748D11 /* NFD2C */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8012A6E92CFF33F100748D11 /* nfd2c */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				808EFC912D254F0B00721275 /* Exceptions for "nfd2c" folder in "NFD2C" target */,
+			);
 			path = nfd2c;
 			sourceTree = "<group>";
 		};
@@ -433,7 +446,6 @@
 				CODE_SIGN_ENTITLEMENTS = nfd2c/nfd2c.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"nfd2c/Preview Content\"";
 				DEVELOPMENT_TEAM = FZ8DDWDS7Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -452,7 +464,7 @@
 					"$(PROJECT_DIR)/nfd2c/Library",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = "0.1.1-alpha";
+				MARKETING_VERSION = "0.2.0-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = "WooSeok-Kim.NFD2C";
 				PRODUCT_NAME = NFD2C;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -473,7 +485,6 @@
 				CODE_SIGN_ENTITLEMENTS = nfd2c/nfd2c.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"nfd2c/Preview Content\"";
 				DEVELOPMENT_TEAM = FZ8DDWDS7Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -492,7 +503,7 @@
 					"$(PROJECT_DIR)/nfd2c/Library",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = "0.1.1-alpha";
+				MARKETING_VERSION = "0.2.0-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = "WooSeok-Kim.NFD2C";
 				PRODUCT_NAME = NFD2C;
 				SWIFT_EMIT_LOC_STRINGS = YES;

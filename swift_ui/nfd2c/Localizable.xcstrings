@@ -61,18 +61,12 @@
         }
       }
     },
-    "NFD2C v0.1.0-alpha" : {
+    "NFD2C %@" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "NFD2C v0.1.0-alpha"
-          }
-        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "NFD2C v0.1.0-alpha"
+            "value" : "NFD2C %@"
           }
         }
       }
@@ -93,6 +87,16 @@
         }
       }
     },
+    "Recent Change(s)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최근 변환된 파일"
+          }
+        }
+      }
+    },
     "Recently Changed File(s)" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -106,6 +110,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "최근 변환된 파일"
+          }
+        }
+      }
+    },
+    "Show Less" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "줄이기"
+          }
+        }
+      }
+    },
+    "Show More" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "더보기"
           }
         }
       }
