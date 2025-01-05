@@ -10,14 +10,15 @@ import SwiftUI
 class DirectoryViewModel: ObservableObject {
     @Published var urlPath: String = ""
     @Published var changeDetected: Bool = false
-    @Published var recentChanges: FileTracker<String>
+    @Published var recentChanges: [String] = []
+    @Published var recentChanges_: FileTracker<String>
     
     private let maxCount: Int
     private var directoryObserver: RecursiveDirectoryObserver?
     
     init(maxCount: Int) {
         self.maxCount = maxCount
-        recentChanges = FileTracker<String>(size: maxCount)
+        recentChanges_ = FileTracker<String>(size: maxCount)
     }
     
     func selectDirectory() {
@@ -82,7 +83,8 @@ class DirectoryViewModel: ObservableObject {
     
     func updateRecentChanges(results: [String]) {
         guard !results.isEmpty else { return }
-        recentChanges.append(contentsOf: results)
+        // recentChanges.append(contentsOf: results)
+        recentChanges.insert(contentsOf: results, at: 0)
         
         // if recentChanges.count >= maxCount {
             // recentChanges = Array(recentChanges.suffix(maxCount))
