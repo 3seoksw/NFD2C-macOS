@@ -11,9 +11,14 @@ struct FooterView: View {
     @ObservedObject var viewModel: DirectoryViewModel
     @State private var isHovered: Bool = false
 
+    var appVersion: String {
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "Unknown"
+        return "v\(version)"
+    }
+    
     var body: some View {
         HStack {
-            Text("NFD2C v0.1.0-alpha")
+            Text("NFD2C \(appVersion)")
                 .fixedSize()
                 .font(.subheadline)
                 .foregroundStyle(.gray)
