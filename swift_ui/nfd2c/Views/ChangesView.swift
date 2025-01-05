@@ -9,31 +9,66 @@ import SwiftUI
 
 struct ChangesView: View {
     @ObservedObject var viewModel: DirectoryViewModel
-    var numberOfTrackingChanges = 3
+    @State private var showButtonIsHovered: Bool = false
+    @State private var showAll: Bool = false
+    @State private var height: CGFloat = 0
+    var numberOfShowingChanges = 3
     var trackingRecentFiles: [String] = []
     
     var body: some View {
         VStack(alignment: .leading) {
             if viewModel.changeDetected {
-                // let changes = viewModel.recentChanges
+                // TODO: `recentChanges` must be a Queue type for tracking recent changes
                 let recentChanges = viewModel.recentChanges
 
-                // let recentChanges = Array(changes.suffix(numberOfTrackingChanges))
+                let isScrollView = showAll && recentChanges.count > numberOfShowingChanges
                 
                 VStack(alignment: .leading) {
-                    Text("Recently Changed File(s)")
-                        .fixedSize()
-                        .fontWeight(.bold)
-                        .foregroundStyle(.gray)
-                        .padding(.bottom, 3)
-                    
-                    ForEach(recentChanges, id: \.self) { change in
-                        DirectoryItemView(viewModel: viewModel, path: change, isFile: true)
-                        // .offset(x:0)
-                        // .animation(.easeInOut, value: recentChanges)
-                        // .transition(.move(edge: .top))
+                    HStack {
+                        Text("Recent Change(s)")
+                            .fixedSize()
+                            .fontWeight(.bold)
+                            .foregroundStyle(.gray)
+                            .padding(.bottom, 3)
+                        
+                        Spacer()
+                        
+                        if recentChanges.count > 3 {
+                            Button(action: {
+                                showAll.toggle()
+                            }) {
+                                Text(showAll ? "Show Less" : "Show More")
+                                    .font(.footnote)
+                                    .foregroundStyle(showButtonIsHovered ? .blue : .primary)
+                            }
+                            .buttonStyle(.plain)
+                            .onHover { hovering in
+                                withAnimation(.easeInOut(duration: 0.2)) {
+                                    showButtonIsHovered = hovering
+                                }
+                            }
+                        }
                     }
-                    // .animation(.easeInOut(duration: 0.3), value: recentChanges)
+                    
+                    let displayingChanges = isScrollView ? recentChanges : Array(recentChanges.prefix(3))
+                    
+                    if !isScrollView {
+                        ForEach(displayingChanges, id: \.self) { change in
+                            DirectoryItemView(viewModel: viewModel, path: change, isFile: true)
+                        }
+                        .animation(.easeInOut, value: displayingChanges)
+                    } else {
+                        ScrollView {
+                            VStack(alignment: .leading) {
+                                ForEach(displayingChanges, id: \.self) { change in
+                                    DirectoryItemView(viewModel: viewModel, path: change, isFile: true)
+                                }
+                                .animation(.easeInOut, value: displayingChanges)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
                 }
             }
         }
