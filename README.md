@@ -21,7 +21,7 @@ https://github.com/user-attachments/assets/98fcb955-c3b2-403a-8fea-d0708f722488
 > [!NOTE]
 > 정식 배포 단계가 아니기 때문에 프로그램이 아직 불완전하다는 점 양해 부탁드립니다.
 
-1. [Github Release](https://github.com/3seoksw/NFD2C-macOS/releases/tag/v0.1.0-alpha)에서 `NFD2C.zip` 파일을 다운로드
+1. [Github Release](https://github.com/3seoksw/NFD2C-macOS/releases/tag/v0.2.0-alpha)에서 `NFD2C.zip` 파일을 다운로드
 2. 다운로드 받은 `NFD2C.zip` 파일을 압축해제
 3. `NFD2C.app` 파일을 실행
 4. `System Settings` - `Privacy & Security` 에서 `NFD2C`에게 권한 승인
